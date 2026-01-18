@@ -1,0 +1,14 @@
+app:
+  image: spring-demo:1.0
+  ports:
+    - "8080:8080"
+  environment:
+    SPRING_PROFILES_ACTIVE: prod
+    JWT_SECRET: "cambia-esto-por-una-clave-larga-de-clase"
+    DB_HOST: postgres
+    DB_PORT: 5432
+    DB_NAME: demo
+    DB_USER: demo
+    DB_PASSWORD: demo
+  depends_on:
+    - postgres
